@@ -2415,6 +2415,11 @@
         function attributesCallbacks(initialObject, callbacksArray, today) {
             var resultObject = $.extend(true, {}, initialObject);
 
+            if (resultObject.hasOwnProperty('class')) {
+                //holy fuck
+                resultObject.class += `day-${today.date.getFullYear()}-${today.date.getMonth() + 1}-${today.date.getDate()}`;
+            }            
+            
             $.each(callbacksArray, function(cbAttrIndex, cbAttr) {
                 var addAttributes = cbAttr(today);
                 for (var attr in addAttributes) {
