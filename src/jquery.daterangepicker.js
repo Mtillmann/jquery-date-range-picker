@@ -2417,7 +2417,7 @@
 
             if (resultObject.hasOwnProperty('class')) {
                 //holy fuck
-                resultObject.class += `day-${today.date.getFullYear()}-${today.date.getMonth() + 1}-${today.date.getDate()}`;
+                resultObject.class += ` day-${today.date.getFullYear()}-${today.date.getMonth() + 1}-${today.date.getDate()}`;
             }            
             
             $.each(callbacksArray, function(cbAttrIndex, cbAttr) {
